@@ -56,7 +56,7 @@ Shell 版本：[https://github.com/spiritLHLS/ecs](https://github.com/spiritLHLS
 - 内存测试：[memorytest](https://github.com/oneclickvirt/memorytest)，支持 sysbench、dd、winsat、mbw、stream
 - 硬盘测试：[disktest](https://github.com/oneclickvirt/disktest)，支持 dd、fio、winsat
 - 流媒体平台解锁测试并发查询：[UnlockTests](https://github.com/oneclickvirt/UnlockTests)，逻辑借鉴 [RegionRestrictionCheck](https://github.com/lmc999/RegionRestrictionCheck) 等
-- IP 质量/安全信息并发查询：二进制文件编译至 [securityCheck](https://github.com/oneclickvirt/securityCheck)
+- IP 质量/安全信息：公开源码构建中不可用。
 - 邮件端口测试：[portchecker](https://github.com/oneclickvirt/portchecker)
 - 上游及回程路由线路检测：借鉴 [zhanghanyun/backtrace](https://github.com/zhanghanyun/backtrace)，二次开发至 [oneclickvirt/backtrace](https://github.com/oneclickvirt/backtrace)
 - 三网路由测试：基于 [NTrace-core](https://github.com/nxtrace/NTrace-core)，二次开发至 [nt3](https://github.com/oneclickvirt/nt3)
@@ -277,7 +277,7 @@ Usage: goecs [options]
   -ping
         Enable/Disable ping test
   -security
-        Enable/Disable security test (default true)
+        Enable/Disable security test (default false)
   -speed
         Enable/Disable speed test (default true)
   -spnum int
@@ -364,7 +364,7 @@ cd ecs
 
 2. 安装 Go 环境（如已安装可跳过）
 
-选择 go 1.25.4 的版本进行安装
+选择 go 1.26.5 的版本进行安装
 
 ```bash
 curl -L https://cdn.spiritlhl.net/https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/go.sh -o go.sh && chmod +x go.sh && bash go.sh 
